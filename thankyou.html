@@ -262,70 +262,103 @@
       background-color: var(--card-bg);
       border: 1px solid #EAE0D5;
       border-radius: 6px;
-      padding: 32px 28px;
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-    }
-    .test-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--gold-pale);
-      flex-shrink: 0;
-    }
-    .test-content { flex: 1; }
-    .test-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--deep-brown);
-      margin-bottom: 4px;
+      padding: 28px 28px;
+      margin-bottom: 16px;
     }
     .test-role {
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .test-role span {
+      font-family: 'Noto Serif JP', serif;
+      letter-spacing: 1px;
+    }
+    .test-body {
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.95;
+    }
+    .test-note {
       font-size: 12px;
       color: var(--text-sub);
-      margin-bottom: 14px;
+      line-height: 1.8;
+      text-align: center;
+      margin-top: 20px;
       letter-spacing: 0.5px;
     }
-    .test-quote {
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--text);
-      line-height: 1.9;
-      margin-bottom: 16px;
-      position: relative;
-      padding-left: 20px;
+
+    /* ── 3大特典カード ── */
+    .gifts-section {
+      margin-bottom: 48px;
     }
-    .test-quote::before {
-      content: '❝';
-      color: var(--gold);
+    .gifts-title {
       font-size: 22px;
-      position: absolute;
-      left: -2px;
-      top: -4px;
-      line-height: 1;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-align: center;
+      color: var(--deep-brown);
+      margin-bottom: 32px;
     }
-    .test-bullets {
-      list-style: none;
+    .gifts-title .gold-rule { margin-top: 14px; }
+
+    .gift-card {
+      background-color: var(--card-bg);
+      border: 1px solid #EAE0D5;
+      border-radius: 6px;
+      padding: 30px 28px;
+      margin-bottom: 18px;
+    }
+    .gift-card-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .gift-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .gift-card-title {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--deep-brown);
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+    .gift-card-kicker {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+    .gift-card-desc {
+      font-size: 16px;
+      color: var(--text-sub);
+      line-height: 1.9;
       border-top: 1px solid var(--gold-pale);
       padding-top: 14px;
     }
-    .test-bullets li {
-      font-size: 15px;
-      color: var(--text);
-      line-height: 1.8;
-      margin-bottom: 6px;
-      padding-left: 16px;
-      position: relative;
-    }
-    .test-bullets li::before {
-      content: '◆';
+    .gift-card-timing {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      letter-spacing: 1px;
       color: var(--gold);
-      font-size: 7px;
-      position: absolute;
-      left: 0;
-      top: 2px;
+      border: 1px solid var(--gold-pale);
+      background-color: var(--light-bg);
+      padding: 4px 12px;
+      border-radius: 3px;
     }
 
     /* ── メール確認ボックス ── */
@@ -382,9 +415,9 @@
       .gift-copy { font-size: 20px; }
       .gift-copy .line2 { font-size: 18px; }
       .step-grid { grid-template-columns: 1fr; gap: 14px; }
-      .testimonial-card { flex-direction: column; align-items: center; text-align: center; }
-      .test-quote { padding-left: 0; }
-      .test-bullets li { text-align: left; }
+      .gift-card-title { font-size: 17px; }
+      .gift-card-desc { font-size: 15px; }
+      .test-body { font-size: 15px; }
     }
   </style>
 </head>
@@ -395,22 +428,22 @@
     <!-- ② 注目ボックス「閉じないでください」 -->
     <!-- ★ テキスト編集はここを直接書き換えてください ★ -->
     <section class="alert-box">
-      <span class="alert-stay">⚠ このページはまだ閉じないでください</span>
+      <span class="alert-stay">このページは、まだ閉じないでください</span>
       <p class="alert-main">
         ご登録ありがとうございます。<br>
-        人生を理想通りに加速させていきたい<br>
-        あなたへ、
-        <strong>特別なお知らせ</strong>
+        受け取っていただきたいものが、<br>
+        もうひとつあります。
+        <strong>公式LINE 3つの特典</strong>
       </p>
     </section>
 
     <!-- ③ ギフト見出し -->
     <!-- ★ テキスト編集はここを直接書き換えてください ★ -->
     <section class="gift-section">
-      <div class="gift-label">🌟 メルマガ登録者限定特典プレゼント 🌟</div>
+      <div class="gift-label">メールレター登録者へ</div>
       <h2 class="gift-copy">
-        <span>3000年の叡智と脳科学で読み解く</span>
-        <span class="line2">あなた専用の個別エネルギー診断書</span>
+        <span>自分を知り、未来を拓く。</span>
+        <span class="line2">人生設計・はじめの3点セット</span>
       </h2>
       <div class="gold-rule"></div>
     </section>
@@ -422,20 +455,71 @@
         <svg class="line-icon" viewBox="0 0 24 24">
           <path d="M24 10.304c0-5.228-5.383-9.47-12-9.47S0 5.076 0 10.304c0 4.687 4.263 8.6 10.014 9.355.39.085.922.258 1.057.593.12.3.077.765.038 1.067l-.164 1.02c-.049.304-.238 1.19.167 1.299.399.11 1.072-.26 1.503-.61l6.32-5.22c.38-.309.805-.758 1.047-1.168C22.616 16.035 24 13.315 24 10.304zm-14.887 2.39h-2.18c-.287 0-.52-.232-.52-.52v-3.74c0-.287.233-.52.52-.52h2.18c.287 0 .52.233.52.52v.62c0 .288-.233.52-.52.52h-1.54v.94h1.54c.287 0 .52.232.52.52v.62c0 .287-.233.52-.52.52h-1.54v.94h1.54c.287 0 .52.233.52.52v.62c0 .288-.233.52-.52.52zm3.328 0h-.62c-.288 0-.52-.232-.52-.52v-4.26c0-.287.232-.52.52-.52h.62c.288 0 .52.233.52.52v4.26c0 .288-.232.52-.52.52zm4.722-.52c0 .288-.232.52-.52.52h-.59c-.197 0-.376-.11-.462-.288L14.07 9.176v3.018c0 .288-.232.52-.52.52h-.62c-.288 0-.52-.232-.52-.52v-4.26c0-.287.232-.52.52-.52h.59c.197 0 .376.11.462.288l2.122 3.23V7.914c0-.287.232-.52.52-.52h.62c.288 0 .52.233.52.52v4.26zm3.337-2.61h-1.54v-.94h1.54c.287 0 .52-.232.52-.52v-.62c0-.287-.233-.52-.52-.52h-2.18c-.287 0-.52.233-.52.52v4.26c0 .288.233.52.52.52h2.18c.287 0 .52-.232.52-.52v-.62c0-.288-.233-.52-.52-.52h-1.54v-.94h1.54c.287 0 .52-.232.52-.52v-.62c0-.287-.233-.52-.52-.52z"/>
         </svg>
-        すぐに公式LINEで受け取る
+        公式LINEで3つの特典を受け取る
       </a>
     </div>
 
-    <!-- ⑤ バナー画像 -->
-    <!-- ★ 画像を差し替える時は src="ファイル名.png" を変えてください ★ -->
-    <div class="banner-container">
-      <img class="banner-img" src="banner_seiko.jpg" alt="努力の方向を間違えていませんか？個別エネルギー診断書（LINE公式登録で無料プレゼント）">
-    </div>
+    <!-- ⑤ 3つの特典 -->
+    <!-- ★ 特典の名前・説明はここを直接書き換えてください ★ -->
+    <section class="gifts-section">
+      <h3 class="gifts-title">
+        お受け取りいただける3つの特典
+        <div class="gold-rule"></div>
+      </h3>
 
-    <!-- ⑥ 診断の受け取り方 3ステップ -->
+      <!-- 特典1 -->
+      <div class="gift-card">
+        <div class="gift-card-head">
+          <div class="gift-card-num">01</div>
+          <h4 class="gift-card-title">
+            <span class="gift-card-kicker">Life Design Check</span>
+            天地人 人生設計チェック
+          </h4>
+        </div>
+        <p class="gift-card-desc">
+          天・地・人という3つの視点から、今の現在地を見立てるチェックシートです。
+          「このまま終わるのかな」という感覚の正体が、どこにあるのかを静かに整理できます。
+          <span class="gift-card-timing">友だち追加後、すぐに届きます</span>
+        </p>
+      </div>
+
+      <!-- 特典2 -->
+      <div class="gift-card">
+        <div class="gift-card-head">
+          <div class="gift-card-num">02</div>
+          <h4 class="gift-card-title">
+            <span class="gift-card-kicker">9 types</span>
+            9タイプから導き出す 才能開花診断
+          </h4>
+        </div>
+        <p class="gift-card-desc">
+          生まれ年から導く9つのタイプ別に、あなたの才能と強み、気をつけたいポイントをまとめました。
+          「自分を知り、相手を知る」——その一点だけでも、強みの活かし方と人との関わり方が変わります。
+          <span class="gift-card-timing">翌日20時にお届け</span>
+        </p>
+      </div>
+
+      <!-- 特典3 -->
+      <div class="gift-card">
+        <div class="gift-card-head">
+          <div class="gift-card-num">03</div>
+          <h4 class="gift-card-title">
+            <span class="gift-card-kicker">Bon Voyage</span>
+            旅を、運に変える<br>保存版の手引き書
+          </h4>
+        </div>
+        <p class="gift-card-desc">
+          楽しむだけで人生が変わる旅の整え方と、方位ごとに「受け取れるもの」をまとめた保存版です。
+          次の旅の計画に、そのままお使いいただけます。
+          <span class="gift-card-timing">2日後20時にお届け</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ⑥ 受け取り方 3ステップ -->
     <section class="step-section">
       <h3 class="step-section-title">
-        診断の受け取り方（簡単3ステップ）
+        受け取り方（3ステップ）
         <div class="gold-rule"></div>
       </h3>
 
@@ -446,91 +530,90 @@
           <div class="step-num">01</div>
           <h4 class="step-card-title">公式LINEを追加</h4>
           <p class="step-card-desc">
-            上記のボタンを<br>タップして<br>
-            公式LINEを<br>友達追加します。
+            上のボタンを<br>タップして<br>
+            公式LINEを<br>友だち追加します。
           </p>
         </div>
 
         <!-- ★ ステップ2のテキストを編集 ★ -->
         <div class="step-card">
           <div class="step-num">02</div>
-          <h4 class="step-card-title">生年月日を送信</h4>
+          <h4 class="step-card-title">1つ目がすぐ届く</h4>
           <p class="step-card-desc">
-            トーク画面に<br>あなたの生年月日を<br>
-            送信します。<br>
-            （例：1980年3月19日）
+            追加した直後に<br>
+            【天地人 人生設計<br>チェック】が<br>
+            届きます。
           </p>
         </div>
 
         <!-- ★ ステップ3のテキストを編集 ★ -->
         <div class="step-card">
           <div class="step-num">03</div>
-          <h4 class="step-card-title">診断書をお送りします</h4>
+          <h4 class="step-card-title">3日間で残り2つ</h4>
           <p class="step-card-desc">
-            エネルギータイプと<br>
-            現在地のブレーキを<br>
-          特定した<br>
-            診断アドバイスを<br>
-            個別にお送りします。
+            翌日から3日間、<br>
+            天・地・人の視点と<br>
+            残りの2つの特典を<br>
+            順にお届けします。
           </p>
         </div>
 
       </div>
     </section>
 
+    <!-- ⑥-2 LINEボタン（再掲） -->
+    <div class="line-btn-wrap" style="margin-bottom: 48px;">
+      <a href="https://lin.ee/gdyHXbo" class="line-btn" id="line-cta-bottom" target="_blank" rel="noopener noreferrer">
+        <svg class="line-icon" viewBox="0 0 24 24">
+          <path d="M24 10.304c0-5.228-5.383-9.47-12-9.47S0 5.076 0 10.304c0 4.687 4.263 8.6 10.014 9.355.39.085.922.258 1.057.593.12.3.077.765.038 1.067l-.164 1.02c-.049.304-.238 1.19.167 1.299.399.11 1.072-.26 1.503-.61l6.32-5.22c.38-.309.805-.758 1.047-1.168C22.616 16.035 24 13.315 24 10.304zm-14.887 2.39h-2.18c-.287 0-.52-.232-.52-.52v-3.74c0-.287.233-.52.52-.52h2.18c.287 0 .52.233.52.52v.62c0 .288-.233.52-.52.52h-1.54v.94h1.54c.287 0 .52.232.52.52v.62c0 .287-.233.52-.52.52h-1.54v.94h1.54c.287 0 .52.233.52.52v.62c0 .288-.233.52-.52.52zm3.328 0h-.62c-.288 0-.52-.232-.52-.52v-4.26c0-.287.232-.52.52-.52h.62c.288 0 .52.233.52.52v4.26c0 .288-.232.52-.52.52zm4.722-.52c0 .288-.232.52-.52.52h-.59c-.197 0-.376-.11-.462-.288L14.07 9.176v3.018c0 .288-.232.52-.52.52h-.62c-.288 0-.52-.232-.52-.52v-4.26c0-.287.232-.52.52-.52h.59c.197 0 .376.11.462.288l2.122 3.23V7.914c0-.287.232-.52.52-.52h.62c.288 0 .52.233.52.52v4.26zm3.337-2.61h-1.54v-.94h1.54c.287 0 .52-.232.52-.52v-.62c0-.287-.233-.52-.52-.52h-2.18c-.287 0-.52.233-.52.52v4.26c0 .288.233.52.52.52h2.18c.287 0 .52-.232.52-.52v-.62c0-.288-.233-.52-.52-.52h-1.54v-.94h1.54c.287 0 .52-.232.52-.52v-.62c0-.287-.233-.52-.52-.52z"/>
+        </svg>
+        公式LINEで3つの特典を受け取る
+      </a>
+    </div>
+
     <!-- ⑦ 生徒の声 -->
     <section class="testimonials-section">
       <h3 class="testimonials-title">
-        これまでにセッション・講座を<br>受けられた方の声
+        すでに結果を出している方が、<br>次に選んだこと
         <div class="gold-rule"></div>
       </h3>
 
-      <!-- 体験談1：M.Yさん -->
+      <!-- ★ 事例はここを直接書き換えてください ★ -->
+
+      <!-- 事例1：経営者 Fさん -->
       <div class="testimonial-card">
-        <img class="test-avatar" src="my_san_avatar.jpg" alt="M.Yさんのプロフィール写真" style="object-position: center top;">
-        <div class="test-content">
-          <p class="test-name">M.Yさん</p>
-          <p class="test-role">会社員（教育、サービス業）</p>
-          <p class="test-quote">
-            講座に入る前のモヤモヤや鬱々が<br>
-            全く思い出せないくらい変化！<br>
-            自分でも驚いています！
-          </p>
-          <ul class="test-bullets">
-            <li>受講前は、仕事も楽しくなく、毎日の変化もなく、コロナ後から特に鬱々としていました。いろいろ学んできたつもりだけど効果を感じられない感じでした。</li>
-            <li>せいこさんの講座を受講してすぐに、うれしい情報が入ってきて、行動的になって、以前が思い出せないくらい毎日が楽しくパワーがあふれている感じです！</li>
-            <li>びっくりするような引き寄せが起きて、職場の人間関係がすっきり改善！</li>
-            <li>将来の夢もできて「人生って楽しい！」と思えるようになりました。</li>
-            <li>最近は周りの人から「行動力あるよね〜」と言われるようになりました。</li>
-            <li>自分の本命星の生き方でいいと教えて頂き、「自分らしく生きて行っていいんだー！」と思えるとともに、今までの自分にかけていた制限を取り払いたいと思っています。</li>
-            <li>講座に入る前のモヤモヤ、鬱々とした気持ちが、今では全く思い出せない程の変化に自分でも驚いています！</li>
-          </ul>
-        </div>
+        <p class="test-role">CASE 01 ｜ <span>経営者 Fさん</span></p>
+        <p class="test-body">
+          日々の浮き沈みの中で、判断の軸をどう保つか。そこが長く課題でした。
+          流れの整え方を身につけ、方位を見立てて向かった先で、大きな商機に出会い、
+          それが今、事業のかたちになっています。
+        </p>
       </div>
 
-      <!-- 体験談2：Y.Yさん -->
-      <div class="testimonial-card" style="margin-top: 20px;">
-        <img class="test-avatar" src="yy_san_avatar.jpg" alt="Y.Yさんのプロフィール写真" style="object-position: center top;">
-        <div class="test-content">
-          <p class="test-name">Y.Yさん</p>
-          <p class="test-role">香りブランディングコンサルタント</p>
-          <p class="test-quote">
-            売上が2倍に！夫の収入が上がり、<br>
-            想定外の臨時収入が入ることに！
-          </p>
-          <ul class="test-bullets">
-            <li>効率よく仕事で結果を出したいと思い入りました。</li>
-            <li>講座開始早々売上が2倍に！</li>
-            <li>今までなら出会えないような人と出会うようになり事業がどんどん拡大！</li>
-            <li>時間がない…といつも思っていたけど、効率よく時間を使えるようになった。</li>
-            <li>清々しい気持ちで行動できるようになった。</li>
-            <li>夫の収入が上がった！家族のコミュニケーションの取り方が変わって心地よくなった。</li>
-            <li>思ってもみなかった想定外の臨時収入が入ることになった！</li>
-            <li>「目に見えない力」を感じることが多くなり守られている感じが強くなった。</li>
-            <li>効果がすごいので逆に怖い。でもせいこさんから学んでいるマインドのおかげで、冷静に考え、受け止め、行動できるようになりました。開運体質づくりと人格形成は本当に大事だと思っています。</li>
-          </ul>
-        </div>
+      <!-- 事例2：整体師から経営へ Cさん -->
+      <div class="testimonial-card">
+        <p class="test-role">CASE 02 ｜ <span>整体院経営 Cさん</span></p>
+        <p class="test-body">
+          自分を小さく生きることをやめると決めてから、一つの職能にとどまらず、
+          不動産会社の設立という次の事業へ。<br>
+          持っていたものを、より大きな器に載せ替える選択でした。
+        </p>
       </div>
+
+      <!-- 事例3：医師 Aさん -->
+      <div class="testimonial-card">
+        <p class="test-role">CASE 03 ｜ <span>40代・医師 Aさん</span></p>
+        <p class="test-body">
+          専門職として十分な実績を重ねたうえで、動くタイミングを見立て直しました。
+          その先で、転職と、長く温めていたご自身のセミナー開催という、
+          望んでいた次のステージへ進んでいかれました。
+        </p>
+      </div>
+
+      <p class="test-note">
+        ご本人の許可を得て掲載しています。<br>
+        変化の内容や時期は人によって異なります。
+      </p>
 
     </section>
 
@@ -549,7 +632,7 @@
     <!-- ⑨ フッター -->
     <footer class="footer">
       <img class="footer-logo" src="logo_firstclass.png" alt="First Class by Seiko Meguro">
-      <p>© First Class Teiogaku. All Rights Reserved.</p>
+      <p>© SEIKO MEGURO. All Rights Reserved.</p>
     </footer>
 
   </div><!-- /wrapper -->
