@@ -179,18 +179,16 @@
       flex-shrink: 0;
     }
 
-    /* ── Banner ── */
-    .banner-container {
-      margin: 0 auto 48px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #EAE0D5;
-      box-shadow: 0 12px 40px rgba(44, 35, 24, 0.10);
+    /* ── Illustration ── */
+    .illust {
+      margin: 0 auto 8px;
+      max-width: 560px;
     }
-    .banner-img {
+    .illust img {
       width: 100%;
       height: auto;
       display: block;
+      mix-blend-mode: multiply;
     }
 
     /* ── Steps Section ── */
@@ -448,7 +446,13 @@
       <div class="gold-rule"></div>
     </section>
 
-    <!-- ④ LINEボタン（バナーより上） -->
+    <!-- ③-2 線画イラスト -->
+    <!-- ★ 画像を差し替える時は src="ファイル名.jpg" を変えてください ★ -->
+    <div class="illust">
+      <img src="illust_window.jpg" alt="窓辺の机でノートを開き、静かに外を眺める女性の線画イラスト">
+    </div>
+
+    <!-- ④ LINEボタン -->
     <!-- ★ LINEのURLはここを変更: href="https://lin.ee/..." ★ -->
     <div class="line-btn-wrap">
       <a href="https://lin.ee/gdyHXbo" class="line-btn" id="line-cta-top" target="_blank" rel="noopener noreferrer">
