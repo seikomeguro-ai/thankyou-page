@@ -24,6 +24,7 @@
       --card-bg:    #FEFCF9;
       --text:       #3C3328;
       --text-sub:   #7A7062;
+      --wine:       #7A2A34;
       --line-green: #06C755;
     }
 
@@ -78,12 +79,13 @@
 
     /* ── Attention Alert Box ── */
     .alert-box {
-      background: linear-gradient(135deg, #2C2318 0%, #4A3828 100%);
+      background-color: #FFFFFF;
+      border: 1px solid var(--gold-pale);
       border-radius: 6px;
-      padding: 32px 28px;
+      padding: 34px 28px 36px;
       text-align: center;
       margin-bottom: 40px;
-      box-shadow: 0 8px 30px rgba(44, 35, 24, 0.25);
+      box-shadow: 0 10px 34px rgba(44, 35, 24, 0.09);
       position: relative;
       overflow: hidden;
     }
@@ -94,26 +96,49 @@
       height: 3px;
       background: linear-gradient(90deg, var(--gold-light), var(--gold), var(--gold-light));
     }
+
+    /* 注意ラベル：両側にヘアラインを引いて視線を止める */
     .alert-stay {
-      font-size: 15px;
-      color: var(--gold-light);
-      letter-spacing: 3px;
-      margin-bottom: 16px;
-      display: block;
-    }
-    .alert-main {
-      font-size: 22px;
-      font-weight: 500;
-      color: #FEFCF9;
-      line-height: 1.7;
-      letter-spacing: 1px;
-    }
-    .alert-main strong {
-      display: block;
-      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 14px;
       font-weight: 600;
-      margin-top: 8px;
-      color: var(--gold-light);
+      color: var(--wine);
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+    }
+    .alert-stay::before,
+    .alert-stay::after {
+      content: '';
+      flex: 1;
+      max-width: 42px;
+      height: 1px;
+      background: var(--wine);
+      opacity: 0.4;
+    }
+
+    .alert-main {
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--deep-brown);
+      line-height: 1.9;
+      letter-spacing: 0.5px;
+    }
+    /* 一番届けたい一行：金の下地＋太字で浮かび上がらせる */
+    .alert-lead {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .alert-lead strong {
+      display: inline-block;
+      font-size: 27px;
+      font-weight: 600;
+      color: var(--deep-brown);
+      letter-spacing: 2px;
+      background: linear-gradient(transparent 58%, var(--gold-pale) 58%);
+      padding: 0 8px 2px;
     }
 
     /* ── Gift Section ── */
@@ -433,8 +458,11 @@
     /* ── Responsive ── */
     @media (max-width: 640px) {
       .wrapper { padding: 32px 15px 50px; }
-      .alert-main { font-size: 16px; }
-      .alert-main strong { font-size: 18px; }
+      .alert-box { padding: 28px 18px 30px; }
+      .alert-stay { font-size: 12.5px; letter-spacing: 1px; gap: 8px; }
+      .alert-stay::before, .alert-stay::after { max-width: 20px; }
+      .alert-main { font-size: 17px; }
+      .alert-lead strong { font-size: 21px; letter-spacing: 1px; }
       .gift-copy { font-size: 20px; }
       .gift-copy .line2 { font-size: 18px; }
       .step-grid { grid-template-columns: 1fr; gap: 14px; }
@@ -456,8 +484,8 @@
         ご登録ありがとうございます。<br>
         受け取っていただきたいものが、<br>
         もうひとつあります。
-        <strong>公式LINE 3つの特典</strong>
       </p>
+      <p class="alert-lead"><strong>公式LINE 3つの特典</strong></p>
     </section>
 
     <!-- ③ ギフト見出し -->
