@@ -311,6 +311,22 @@
       padding: 30px 28px;
       margin-bottom: 18px;
     }
+    .gift-cover {
+      margin: 0 auto 24px;
+      text-align: center;
+    }
+    .gift-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #EAE0D5;
+      border-radius: 3px;
+      box-shadow: 0 10px 28px rgba(44, 35, 24, 0.13);
+    }
+    .gift-cover--portrait img {
+      max-width: 208px;
+    }
     .gift-card-head {
       display: flex;
       align-items: baseline;
@@ -469,6 +485,10 @@
 
       <!-- 特典1 -->
       <div class="gift-card">
+        <!-- ★ 表紙画像を差し替える時は src= を変えてください ★ -->
+        <div class="gift-cover">
+          <img src="cover_tenchijin.jpg" alt="天地人 人生設計チェックの表紙">
+        </div>
         <div class="gift-card-head">
           <div class="gift-card-num">01</div>
           <h4 class="gift-card-title">
@@ -485,6 +505,9 @@
 
       <!-- 特典2 -->
       <div class="gift-card">
+        <div class="gift-cover gift-cover--portrait">
+          <img src="cover_9types.jpg" alt="9タイプから導き出す 才能開花診断の表紙">
+        </div>
         <div class="gift-card-head">
           <div class="gift-card-num">02</div>
           <h4 class="gift-card-title">
@@ -501,6 +524,9 @@
 
       <!-- 特典3 -->
       <div class="gift-card">
+        <div class="gift-cover">
+          <img src="cover_tabi.jpg" alt="旅を、運に変える 保存版の手引き書の表紙">
+        </div>
         <div class="gift-card-head">
           <div class="gift-card-num">03</div>
           <h4 class="gift-card-title">
